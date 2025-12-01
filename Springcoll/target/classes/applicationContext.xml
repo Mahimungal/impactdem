@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="s1" class="com.example.demo.Subject">
+		<constructor-arg name="id" value="101"></constructor-arg>
+		<constructor-arg name="name" value="Java"></constructor-arg>
+		<constructor-arg name="author" value="sam"></constructor-arg>
+	</bean>
+	<bean id="s2" class="com.example.demo.Subject">
+		<constructor-arg name="id" value="102"></constructor-arg>
+		<constructor-arg name="name" value="Mysql"></constructor-arg>
+		<constructor-arg name="author" value="joe"></constructor-arg>
+	</bean>
+	<bean id="s3" class="com.example.demo.Subject">
+		<constructor-arg name="id" value="103"></constructor-arg>
+		<constructor-arg name="name" value="C"></constructor-arg>
+		<constructor-arg name="author" value="John"></constructor-arg>
+	</bean>
+	<bean id="s4" class="com.example.demo.Subject">
+		<constructor-arg name="id" value="104"></constructor-arg>
+		<constructor-arg name="name" value="Python"></constructor-arg>
+		<constructor-arg name="author" value="max"></constructor-arg>
+	</bean>
+	<bean id="t1" class="com.example.demo.Teacher">
+		<property name="id" value="1"></property>
+		<property name="name" value="Ajay"></property>
+		<property name="dept" value="Comp"></property>
+		<property name="salary" value="12345"></property>
+		<property name="subjects">
+		<list>
+		<ref bean="s1"/>
+		<ref bean="s2"/>
+		<ref bean="s3"/>
+		<ref bean="s4"/>
+		</list>
+	
+		
+		</property>
+
+	</bean>
+
+</beans>

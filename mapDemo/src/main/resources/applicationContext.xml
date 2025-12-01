@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="a1" class="com.example.demo.Address">
+		<constructor-arg name="flatno" value="402"></constructor-arg>
+		<constructor-arg name="area" value="bhugaon"></constructor-arg>
+		<constructor-arg name="city" value="pune"></constructor-arg>
+		<constructor-arg name="pincode" value="412115"></constructor-arg>
+	</bean>
+	<bean id="e1" class="com.example.demo.Employee">
+		<constructor-arg name="id" value="101"></constructor-arg>
+		<constructor-arg name="name" value="max"></constructor-arg>
+		<constructor-arg name="dept" value="Hr"></constructor-arg>
+		<constructor-arg name="salary" value="12345"></constructor-arg>
+	</bean>
+	<bean id="o1" class="com.example.demo.Org">
+		<property name="regNo" value="555"></property>
+		<property name="name" value="TCS"></property>
+		<property name="city" value="Pune"></property>
+		<property name="emp">
+			<map>
+				<entry key-ref="e1" value-ref="a1"></entry>
+			</map>
+		</property>
+
+	</bean>
+</beans>

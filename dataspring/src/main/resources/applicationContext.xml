@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+           http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="" class="com.example.demo.Student">
+	<property name="id" value="101"></property>
+	<property name="name" value="mahajan"></property>
+</bean>
+	
+	
+	<bean id="" class="com.example.demo.Employee">
+	<constructor-arg name="id" value="101"></constructor-arg>
+	
+	<constructor-arg  name="name" value="mahajan"></constructor-arg>
+	
+	</bean>
+	
+	
+	
+	
+<bean id="add" class="com.example.data.Address">
+	<property name="id" value="101"></property>
+	<property name="name" value="pune"></property>
+	<property name="area" value="bhugaon"></property>
+</bean>	
+	
+	
+	
+	<bean id="Emp" class="com.example.data.Employee">
+	<property name="id" value="101"></property>
+	<property name="name" value="Mahajan"></property>
+	<property name="salary" value="12345"></property>
+	<property name="address">
+	<ref bean="add"/>
+	
+	</property>
+</bean>	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+</beans>
